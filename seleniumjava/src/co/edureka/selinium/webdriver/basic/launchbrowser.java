@@ -1,6 +1,5 @@
 package co.edureka.selinium.webdriver.basic;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -16,7 +15,7 @@ public class launchbrowser {
 
 	public static void main(String[] args)throws InterruptedException {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\sjdemo\\seleniumjava\\chromedriver\\chromedriver.exe");		
+		System.setProperty("webdriver.chrome.driver", "C:\\sjdemo\\chromedriver.exe");		
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("http://demo.guru99.com/insurance/v1/index.php");
@@ -43,6 +42,7 @@ public class launchbrowser {
 		driver.findElement(By.id("email")).sendKeys("basha3@gmail.com");
 		driver.findElement(By.id("password")).sendKeys("basha@786");
 		driver.findElement(By.name("submit")).click();
+	
 	}
 }		
 		

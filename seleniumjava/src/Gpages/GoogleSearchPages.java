@@ -12,10 +12,11 @@ public class GoogleSearchPages {
 		element = driver.findElement(By.name("q"));
 		return element;
 	}
-	String Password = "123456789";
+	public static String samp = "automation step by step - raghav pal";
+
 	public static WebElement button_search(WebDriver driver) 
 	{
-		element = driver.findElement(By.name("btnK"));
+		element = driver.findElement(By.partialLinkText("Google Search"));
 		return element;
 	}
 }

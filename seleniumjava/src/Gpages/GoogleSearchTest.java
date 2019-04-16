@@ -17,20 +17,19 @@ public class GoogleSearchTest {
 	
 	public static void googlesearch() {
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\sjdemo\\seleniumjava\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\sjdemo\\chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
-		GoogleSearchPages.textbox_search(driver).sendKeys("Automation step by step");
-		GoogleSearchPages.button_search(driver).sendKeys(Keys.RETURN);
-		
+		GoogleSearchPages.textbox_search(driver).sendKeys(GoogleSearchPages.samp);
+		//GoogleSearchPages.button_search(driver).sendKeys(Keys.RETURN);
+	
+		GoogleSearchPages.button_search(driver).click();
+	
 		//GoogleSearchPages.textbox_search(driver).sendKeys("Automation step by step");
 		//GoogleSearchPages.button_search(driver).click();
 		
-		//GoogleSearchPages.textbox_search(driver).sendKeys("Automation step by step");
-		
-		//GoogleSearchPages.button_search(driver).sendKeys(Keys.RETURN);
 	}
 
 }
