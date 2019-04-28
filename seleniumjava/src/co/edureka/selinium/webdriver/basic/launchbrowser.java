@@ -151,7 +151,7 @@ public class launchbrowser {
 		
 		System.out.println("enter the password");
 		WebElement pass = driver.findElement(By.id("pass"));
-		pass.sendKeys("basha@786");
+		pass.sendKeys("basha123");
 		
 		WebElement signin = driver.findElement(By.id("u_0_2"));
 		
