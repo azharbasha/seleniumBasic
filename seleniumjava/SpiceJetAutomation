@@ -1,0 +1,38 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+ 
+public class SelectFromandTo 
+{
+	WebDriver driver;
+	
+	@Test
+	public void UsingSendKeys() throws InterruptedException
+	{
+		System.setProperty("webdriver.gecko.driver", "D:\\Cucumber\\geckodriver-v0.21.0-win64\\geckodriver.exe");
+		driver = new FirefoxDriver();
+				
+		driver.get("http://www.spicejet.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(5000);	
+		
+		
+		System.out.println("Selecting the City From dropdown"+"\n");
+		
+		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).sendKeys("COK");
+ 
+		driver.findElement(By.linkText("Kochi (COK)")).click();
+		
+		driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT")).clear();
+		
+		driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT")).sendKeys("BOM");
+		
+		driver.findElement(By.linkText("Mumbai (BOM)")).click();
+			
+		Thread.sleep(5000);
+		
+		driver.quit();
+	}	
+ 
+}
