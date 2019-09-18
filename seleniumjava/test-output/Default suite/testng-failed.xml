@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="Gpages.GoogleSearchPages"/>
-      <class name="co.edureka.selinium.webdriver.basic.launchbrowser"/>
-      <class name="co.edureka.selinium.webdriver.basic.Util"/>
-      <class name="Gpages.GoogleSearchTest"/>
-      <class name="Gpages.TestNG_Demo"/>
+      <class name="Gpages.LaunchBrowser"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="Gpages.LaunchBrowser">
+        <methods>
+          <include name="PageTitle"/>
+          <include name="launchGoogle"/>
+          <include name="ClickfirstLink"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- Gpages.LaunchBrowser -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

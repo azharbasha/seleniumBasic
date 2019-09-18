@@ -1,3 +1,7 @@
+
+
+
+
 package co.edureka.selinium.webdriver.basic;
 
 import java.util.Iterator;
@@ -14,7 +18,9 @@ import org.openqa.selenium.support.ui.Select;
 public class launchbrowser {
 
 	public static void main(String[] args)throws InterruptedException {
-
+		
+				
+		// code for insurance project registration
 		System.setProperty("webdriver.chrome.driver", "C:\\sjdemo\\chromedriver.exe");		
 		WebDriver driver = new ChromeDriver();
 		
